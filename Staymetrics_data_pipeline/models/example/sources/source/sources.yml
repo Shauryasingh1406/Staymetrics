@@ -1,0 +1,12 @@
+version: 2 
+
+sources:
+  - name: STAGING
+    database: STAYMETRICS  
+    schema: STAGING  
+    tables:
+      - name: LISTINGS
+      - name: BOOKINGS
+      - name: HOSTS
+
+ 

@@ -221,3 +221,19 @@ Runtime Error
 [0m01:40:04.742872 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72cf11dc15b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72cf11e10a40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72cf13b3c590>]}
 [0m01:40:04.745817 [debug] [MainThread]: Flushing usage events
 [0m01:40:05.783053 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:56:58.706890 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8eff4a21b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8eff4d1970>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8eff4d2e40>]}
+
+
+============================== 23:56:58.779973 | 687f4fb3-d5d2-43ea-80ce-82cc23a9384d ==============================
+[0m23:56:58.779973 [info ] [MainThread]: Running with dbt=1.12.0
+[0m23:56:58.780891 [debug] [MainThread]: running dbt with arguments {'use_colors': 'True', 'invocation_command': 'dbt compile', 'static_parser': 'True', 'indirect_selection': 'eager', 'send_anonymous_usage_stats': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'debug': 'False', 'version_check': 'True', 'use_experimental_parser': 'False', 'hints_enabled': 'True', 'log_cache_events': 'False', 'empty': 'False', 'profiles_dir': '/home/codespace/.dbt', 'printer_width': '80', 'no_print': 'None', 'write_json': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'warn_error': 'None', 'quiet': 'False', 'target_path': 'None', 'fail_fast': 'False', 'maximum_seed_size_mib': '1', 'introspect': 'True', 'log_path': 'logs', 'log_format': 'default'}
+[0m23:56:58.781948 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /workspaces/Staymetrics/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m23:56:58.783959 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_success": false, "command_wall_clock_time": 0.19622654, "process_in_blocks": "73800", "process_kernel_time": 0.284517, "process_mem_max_rss": "109436", "process_out_blocks": "8", "process_user_time": 2.054737}
+[0m23:56:58.784746 [debug] [MainThread]: Command `dbt compile` failed at 23:56:58.784621 after 0.20 seconds
+[0m23:56:58.785352 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8efed59070>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8eff4a21b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8eff4d1970>]}
+[0m23:56:58.785955 [debug] [MainThread]: Flushing usage events
+[0m23:56:59.699127 [debug] [MainThread]: An error was encountered while trying to flush usage events

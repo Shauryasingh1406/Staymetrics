@@ -1,1 +1,1 @@
-select * from {{ ref("bronze_listings")}}
+select * from {{ ref("silver_listing")}}

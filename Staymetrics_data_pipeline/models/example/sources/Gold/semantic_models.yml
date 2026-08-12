@@ -1,0 +1,61 @@
+semantic_models:
+  - name: staymetrics_obt
+    description: "Semantic model for Staymetrics booking analytics."
+    model: ref('OBT')
+
+    defaults:
+      agg_time_dimension: booking_date
+
+    entities:
+      - name: booking
+        type: primary
+        expr: BOOKING_ID
+
+      - name: listing
+        type: foreign
+        expr: LISTING_ID
+
+      - name: host
+        type: foreign
+        expr: HOST_ID
+
+    dimensions:
+      - name: booking_date
+        type: time
+        type_params:
+          time_granularity: day
+
+      - name: booking_status
+        type: categorical
+
+      - name: property_type
+        type: categorical
+
+      - name: room_type
+        type: categorical
+
+      - name: city
+        type: categorical
+
+      - name: country
+        type: categorical
+
+      - name: price_per_night_tag
+        type: categorical
+
+      - name: response_rate_quality
+        type: categorical
+
+      - name: is_superhost
+        type: categorical
+
+    measures:
+      - name: total_revenue
+        description: "Total revenue generated from bookings."
+        agg: sum
+        expr: TOTAL_AMOUNT
+
+      - name: booking_count
+        description: "Total number of bookings."
+        agg: count
+        expr: BOOKING_ID
